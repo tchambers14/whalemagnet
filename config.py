@@ -8,7 +8,9 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     SECRET_KEY = os.environ['SECRET_KEY'] or 'TEST'  # TODO validate that this approach will work
-
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+    LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
 
 class ProductionConfig(Config):
     DEBUG = False
