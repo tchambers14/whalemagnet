@@ -2,5 +2,8 @@
 <title>{% block title %}Whales!{% endblock %} | The Site for Whale Nuts</title>
 <meta charset=utf-8>
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }} type="image/x-icon" />
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
+{% endblock %}
+{% block body %}
+    <div>Hello Whalenuts</div>
 {% endblock %}

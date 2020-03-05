@@ -1,1 +1,1 @@
-web: gunicorn whalemagnet:app
+web: flask db upgrade; gunicorn whalemagnet:app
