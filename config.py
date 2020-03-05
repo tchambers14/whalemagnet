@@ -9,7 +9,7 @@ class Config(object):
     CSRF_ENABLED = True
     SECRET_KEY = os.environ['SECRET_KEY'] or 'TEST'  # TODO validate that this approach will work
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL'] or 'sqlite:///' + os.path.join(basedir, 'app.db')
     LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
 
 class ProductionConfig(Config):
