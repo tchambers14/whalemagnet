@@ -4,6 +4,7 @@ from app.forms import LoginForm
 from flask_login import current_user, login_user, logout_user
 from app.models import User
 
+# TODO remove line
 
 @app.route('/', methods=['GET'])
 @app.route('/index', methods=['GET'])
